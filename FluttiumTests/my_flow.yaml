@@ -1,0 +1,14 @@
+description: My first Fluttium flow.
+---
+- log: "Hello World!"
+- expectVisible: 'You have pushed the button this many times:'
+- pressOn: 'Increment'
+- expectNotVisible: '2'
+- expectVisible: 1
+- expectVisible: '1'
+- pressOn: 'Increment'
+- expectVisible: '2'
+- expectVisible: '1'
+- expectNotVisible: '1'
+
+
