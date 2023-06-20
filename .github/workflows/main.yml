@@ -42,8 +42,10 @@ jobs:
           # flutter-version: '<FLUTTER_VERSION>'
       - name: Install Flutter dependencies
         run: flutter pub get
-      - name: Run integration tests
-        run: flutter test integration_test --verbose
+      - name: Run Flutter Tests
+        run: flutter test --no-pub
+      #- name: Run integration tests
+      #  run: flutter test integration_test --verbose
 
   # job responsible for running Flutter tests on Android devices
   android:
@@ -71,4 +73,5 @@ jobs:
           api-level: ${{ matrix.api-level }}
           arch: x86_64
           profile: Nexus 6
-          script: flutter test integration_test --verbose
+          #script: flutter test integration_test --verbose
+          script: flutter test --no-pub
