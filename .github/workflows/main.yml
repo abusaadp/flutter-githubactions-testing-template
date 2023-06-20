@@ -46,6 +46,8 @@ jobs:
         run: flutter test --no-pub
       #- name: Run integration tests
       #  run: flutter test integration_test --verbose
+      - name: Install Fluttium
+        run: flutter pub global activate fluttium_cli    
 
   # job responsible for running Flutter tests on Android devices
   android:
@@ -66,6 +68,8 @@ jobs:
           # flutter-version: '<FLUTTER_VERSION>'
       - name: Install Flutter dependencies
         run: flutter pub get
+      - name: Install Fluttium
+        run: flutter pub global activate fluttium_cli 
       - name: Run integration tests
         # more info on https://github.com/ReactiveCircus/android-emulator-runner
         uses: reactivecircus/android-emulator-runner@v2
