@@ -8,7 +8,6 @@ description: My first Fluttium flow.
 - expectVisible: '1'
 - pressOn: 'Increment'
 - expectVisible: '2'
-- expectVisible: '1'
 - expectNotVisible: '1'
 
 
