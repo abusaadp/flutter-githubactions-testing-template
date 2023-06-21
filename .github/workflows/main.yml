@@ -50,6 +50,8 @@ jobs:
         run: flutter pub global activate fluttium_cli
       - name: Run app
         run: flutter run -d iPhone
+      - name: Quit app
+        run: q
       - name: Run Fluttium tests
         run: fluttium test my_flow.yaml -d ios  
     
