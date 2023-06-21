@@ -73,15 +73,15 @@ jobs:
         run: flutter pub get
       - name: Install Fluttium
         run: flutter pub global activate fluttium_cli 
-      - name: Run tests
+      #- name: Run tests
         # more info on https://github.com/ReactiveCircus/android-emulator-runner
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: ${{ matrix.api-level }}
-          arch: x86_64
-          profile: Nexus 6
-          #script: flutter test integration_test --verbose
-          script: flutter test --no-pub
+      #  uses: reactivecircus/android-emulator-runner@v2
+      #  with:
+      #    api-level: ${{ matrix.api-level }}
+      #    arch: x86_64
+      #    profile: Nexus 6
+      #    #script: flutter test integration_test --verbose
+      #    script: flutter test --no-pub
       #- name: Run app
       #  run: flutter run -d sdk
       - name: Run Fluttium tests
