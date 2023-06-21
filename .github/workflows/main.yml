@@ -82,10 +82,15 @@ jobs:
           profile: Nexus 6
           #script: flutter test integration_test --verbose
           script: flutter test --no-pub
-      - name: Run app
-        run: flutter run -d sdk
+      #- name: Run app
+      #  run: flutter run -d sdk
       - name: Run Fluttium tests
-        run: fluttium test my_flow.yaml -d android
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          arch: x86_64
+          profile: Nexus 6
+          script: fluttium test my_flow.yaml -d android
 
   # job responsible for running Flutter tests on Windows devices
   windows:
