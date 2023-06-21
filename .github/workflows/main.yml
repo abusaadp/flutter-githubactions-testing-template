@@ -55,6 +55,10 @@ jobs:
   # job responsible for running Flutter tests on Android devices
   android:
     runs-on: macos-11
+    strategy:
+      matrix:
+        api-level: [21, 23, 29]
+        target: [default, google_apis]
     steps:
       - uses: actions/checkout@v3
       - name: Setup Flutter SDK
