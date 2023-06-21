@@ -49,7 +49,7 @@ jobs:
       - name: Install Fluttium
         run: flutter pub global activate fluttium_cli
       - name: Run app
-        run: flutter run -d ios
+        run: flutter run -d iPhone
       - name: Run Fluttium tests
         run: fluttium test my_flow.yaml -d ios  
     
