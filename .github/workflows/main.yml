@@ -47,7 +47,9 @@ jobs:
       #- name: Run integration tests
       #  run: flutter test integration_test --verbose
       - name: Install Fluttium
-        run: flutter pub global activate fluttium_cli    
+        run: flutter pub global activate fluttium_cli
+      - name: Run app
+        run: flutter run -d ios
       - name: Run Fluttium tests
         run: fluttium test my_flow.yaml -d ios  
     
@@ -80,6 +82,8 @@ jobs:
           profile: Nexus 6
           #script: flutter test integration_test --verbose
           script: flutter test --no-pub
+      - name: Run app
+        run: flutter run -d sdk
       - name: Run Fluttium tests
         run: fluttium test my_flow.yaml -d android
 
