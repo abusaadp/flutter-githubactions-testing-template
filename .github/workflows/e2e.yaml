@@ -85,7 +85,7 @@ jobs:
         flow: ${{ fromJSON(needs.flows.outputs.flows) }}
       fail-fast: true
 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: 📚 Git Checkout
