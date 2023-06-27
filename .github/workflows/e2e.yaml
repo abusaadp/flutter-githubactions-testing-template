@@ -2,10 +2,6 @@ name: e2e
 
 on: [push, workflow_dispatch]
 
-defaults:
-  run:
-    working-directory: example
-
 jobs:
   flows:
     runs-on: ubuntu-latest
