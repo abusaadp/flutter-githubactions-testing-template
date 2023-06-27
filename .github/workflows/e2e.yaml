@@ -78,7 +78,6 @@ jobs:
         run: fluttium test  -d ${{ steps.simulator.outputs.udid }} my_flow.yaml
 
   android:
-    if: false # TODO: Currently does not work
     needs: flows
 
     strategy:
@@ -171,7 +170,6 @@ jobs:
         run: xvfb-run fluttium test -d chrome my_flow.yaml
 
   macos:
-    if: false # TODO: Metal is not supported on macos runners, https://github.com/actions/runner-images/discussions/6138
     needs: flows
 
     strategy:
@@ -206,7 +204,6 @@ jobs:
         run: fluttium test -d macos my_flow.yaml
 
   linux:
-    if: false # TODO: tests currently dont work, but locally they do
     needs: flows
 
     strategy:
