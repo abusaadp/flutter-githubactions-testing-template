@@ -70,7 +70,10 @@ jobs:
         uses: futureware-tech/simulator-action@v2
         with:
           model: 'iPhone 11'
-
+ 
+      - name: Install Fluttium
+        run: flutter pub global activate fluttium_cli 
+            
       - name: 🧪 Testing
         run: fluttium test  -d ${{ steps.simulator.outputs.udid }} my_flow.yaml
 
@@ -124,6 +127,9 @@ jobs:
           avd-name: android
           script: echo "Generated AVD snapshot for caching."
 
+      - name: Install Fluttium
+        run: flutter pub global activate fluttium_cli 
+        
       - name: 🧪 Testing
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -157,7 +163,10 @@ jobs:
 
       - name: 📦 Installing packages
         run: flutter pub get
-
+    
+      - name: Install Fluttium
+        run: flutter pub global activate fluttium_cli 
+        
       - name: 🧪 Testing
         run: xvfb-run fluttium test -d chrome my_flow.yaml
 
@@ -190,6 +199,9 @@ jobs:
           flutter pub get
           cd macos && pod install && cd ..
 
+      - name: Install Fluttium
+        run: flutter pub global activate fluttium_cli 
+          
       - name: 🧪 Testing
         run: fluttium test -d macos my_flow.yaml
 
@@ -223,6 +235,9 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev
 
+      - name: Install Fluttium
+        run: flutter pub global activate fluttium_cli 
+        
       - name: 🧪 Testing
         run: xvfb-run fluttium test -d linux my_flow.yaml
 
@@ -251,6 +266,9 @@ jobs:
 
       - name: 📦 Installing packages
         run: flutter pub get
-
+     
+      - name: Install Fluttium
+        run: flutter pub global activate fluttium_cli 
+        
       - name: 🧪 Testing
         run: fluttium test -d windows my_flow.yaml
