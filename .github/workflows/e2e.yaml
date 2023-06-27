@@ -79,9 +79,6 @@ jobs:
           distribution: "temurin"
           java-version: "11"
 
-      - name: 🐦 Setup Local Fluttium Environment
-        uses: ./.github/actions/local_fluttium_environment
-
       - name: 📦 Installing packages
         run: flutter pub get
 
@@ -129,9 +126,6 @@ jobs:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
 
-      - name: 🐦 Setup Local Fluttium Environment
-        uses: ./.github/actions/local_fluttium_environment
-
       - name: 📦 Installing packages
         run: flutter pub get
 
@@ -154,9 +148,6 @@ jobs:
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
-
-      - name: 🐦 Setup Local Fluttium Environment
-        uses: ./.github/actions/local_fluttium_environment
 
       - name: 📦 Installing packages
         run: |
@@ -183,9 +174,6 @@ jobs:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
 
-      - name: 🐦 Setup Local Fluttium Environment
-        uses: ./.github/actions/local_fluttium_environment
-
       - name: 📦 Installing packages
         run: |
           flutter pub get
@@ -210,9 +198,6 @@ jobs:
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
-
-      - name: 🐦 Setup Local Fluttium Environment
-        uses: ./.github/actions/local_fluttium_environment
 
       - name: 📦 Installing packages
         run: flutter pub get
