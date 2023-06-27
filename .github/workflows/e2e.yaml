@@ -12,6 +12,14 @@ jobs:
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
+      
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
+          # flutter-version: '<FLUTTER_VERSION>'
+        
 
       - name: 🕵️ Finding User Flows
         id: flows
@@ -45,6 +53,13 @@ jobs:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
+          # flutter-version: '<FLUTTER_VERSION>'
+      
       - name: 📦 Installing packages
         run: |
           flutter pub get
@@ -74,6 +89,13 @@ jobs:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
+          # flutter-version: '<FLUTTER_VERSION>'
+      
       - uses: actions/setup-java@v3
         with:
           distribution: "temurin"
@@ -126,6 +148,13 @@ jobs:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
+          # flutter-version: '<FLUTTER_VERSION>'
+
       - name: 📦 Installing packages
         run: flutter pub get
 
@@ -148,7 +177,14 @@ jobs:
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
-
+    
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
+          # flutter-version: '<FLUTTER_VERSION>'
+      
       - name: 📦 Installing packages
         run: |
           flutter pub get
@@ -173,7 +209,14 @@ jobs:
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
-
+    
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
+          # flutter-version: '<FLUTTER_VERSION>'
+      
       - name: 📦 Installing packages
         run: |
           flutter pub get
@@ -198,6 +241,13 @@ jobs:
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
+          # flutter-version: '<FLUTTER_VERSION>'
 
       - name: 📦 Installing packages
         run: flutter pub get
