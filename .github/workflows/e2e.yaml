@@ -45,7 +45,7 @@ jobs:
         flow: ${{ fromJSON(needs.flows.outputs.flows) }}
       fail-fast: true
 
-    runs-on: macos-11
+    runs-on: macos-latest
 
     timeout-minutes: 30
 
@@ -85,7 +85,7 @@ jobs:
         flow: ${{ fromJSON(needs.flows.outputs.flows) }}
       fail-fast: true
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: 📚 Git Checkout
@@ -114,6 +114,7 @@ jobs:
         with:
           api-level: 29
           arch: x86_64
+          emulator-build: 7425822
           profile: Nexus 6
           script: fluttium test -d android my_flow.yaml
 
@@ -157,7 +158,7 @@ jobs:
         flow: ${{ fromJSON(needs.flows.outputs.flows) }}
       fail-fast: true
 
-    runs-on: macos-11
+    runs-on: macos-latest
 
     timeout-minutes: 30
     
