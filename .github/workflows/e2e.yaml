@@ -113,8 +113,8 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-          avd-name: android
-          working-directory: example
+          arch: x86_64
+          profile: Nexus 6
           script: fluttium test -d android my_flow.yaml
 
   web:
