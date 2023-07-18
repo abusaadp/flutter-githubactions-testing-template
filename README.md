@@ -1,6 +1,6 @@
 # test_app
 
-A new Flutter project by Abu Saad Papa.
+A new Flutter project.
 
 ## Getting Started
 
